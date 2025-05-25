@@ -1,4 +1,4 @@
-package com.example.dsa_100.array
+package com.example.dsa_100.string
 
 // Brute Force
 fun maximumLength(s: String): Int {
