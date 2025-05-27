@@ -38,9 +38,30 @@ fun maxFrequency(nums: IntArray, k: Int): Int {
     return result
 }
 
+fun maxFrequencyWithSlidingWindow(nums: IntArray, k: Int): Int {
+    nums.sort()
+    var left = 0
+    var total: Long = 0
+    var result = 0
+
+    for (right in nums.indices) {
+        total += nums[right]
+
+        // Check if current window is valid
+        while ((right - left + 1).toLong() * nums[right] - total > k) {
+            total -= nums[left]
+            left++
+        }
+
+        result = maxOf(result, right - left + 1)
+    }
+
+    return result
+}
+
 fun main() {
     val ip = intArrayOf(3,9,6)
     val k = 2
-    val result = maxFrequency(ip, k)
+    val result = maxFrequencyWithSlidingWindow(ip, k)
     println(result)
 }
