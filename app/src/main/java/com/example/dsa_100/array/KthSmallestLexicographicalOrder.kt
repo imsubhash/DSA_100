@@ -1,5 +1,7 @@
 package com.example.dsa_100.array
 
+//https://leetcode.com/submissions/detail/1658853928/
+
 class Solution {
     fun findKthNumber(n: Int, k: Int): Int {
         var curr = 1
