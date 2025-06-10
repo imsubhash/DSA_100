@@ -1,5 +1,7 @@
 package com.example.dsa_100.string
 
+//https://leetcode.com/problems/maximum-difference-between-even-and-odd-frequency-i/description/?envType=daily-question&envId=2025-06-10
+
 fun maxDifference(s: String): Int {
     val frequencyMap = mutableMapOf<Char, Int>()
 
