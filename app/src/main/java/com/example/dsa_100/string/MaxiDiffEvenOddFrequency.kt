@@ -10,7 +10,7 @@ fun maxDifference(s: String): Int {
     }
 
     var maxEven = Int.MIN_VALUE
-    var minOdd = Int.MAX_VALUE
+    var minOdd = Int.MAX_VALUE//
 
     for ((_, count) in frequencyMap) {
         if (count % 2 == 0) {
